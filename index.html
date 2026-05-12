@@ -21,15 +21,8 @@
       --red: #ff8c8c;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       min-height: 100vh;
@@ -44,14 +37,8 @@
       overflow-x: hidden;
     }
 
-    button, input {
-      font: inherit;
-    }
-
-    .container {
-      width: min(960px, 100%);
-      margin: auto;
-    }
+    button, input { font: inherit; }
+    .container { width: min(960px, 100%); margin: auto; }
 
     .hero {
       position: relative;
@@ -93,17 +80,12 @@
       margin-bottom: 16px;
     }
 
-    .script {
-      color: var(--purple);
-      font-style: italic;
-    }
+    .script { color: var(--purple); font-style: italic; }
+    .hero p { color: var(--muted); max-width: 680px; }
 
-    .hero p {
-      color: var(--muted);
-      max-width: 680px;
-    }
-
-    .hero-actions {
+    .hero-actions,
+    .listen-wrap,
+    .flash-actions {
       display: grid;
       gap: 10px;
       margin-top: 22px;
@@ -119,21 +101,9 @@
       transition: .2s ease;
     }
 
-    .btn:active {
-      transform: scale(.98);
-    }
-
-    .btn.primary {
-      background: var(--paper);
-      color: #160b32;
-      box-shadow: 0 12px 30px rgba(0,0,0,.22);
-    }
-
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,.16);
-      color: var(--paper);
-    }
+    .btn:active { transform: scale(.98); }
+    .btn.primary { background: var(--paper); color: #160b32; box-shadow: 0 12px 30px rgba(0,0,0,.22); }
+    .btn.secondary { background: transparent; border: 1px solid rgba(255,255,255,.16); color: var(--paper); }
 
     .progress-wrap {
       position: sticky;
@@ -147,60 +117,17 @@
       margin-bottom: 26px;
     }
 
-    .progress-head {
-      display: flex;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: .86rem;
-      margin-bottom: 10px;
-      gap: 10px;
-    }
+    .progress-head { display: flex; justify-content: space-between; color: var(--muted); font-size: .86rem; margin-bottom: 10px; gap: 10px; }
+    .progress-head strong { color: var(--paper); }
+    .bar { height: 11px; border-radius: 999px; overflow: hidden; background: rgba(255,255,255,.08); }
+    .fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--purple), var(--orange-soft)); transition: .3s ease; }
 
-    .progress-head strong {
-      color: var(--paper);
-    }
+    .section { margin-top: 34px; }
+    .section-title { margin-bottom: 16px; }
+    .section-title span { color: var(--orange-soft); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 900; }
+    .section-title h2 { font-size: clamp(1.8rem, 8vw, 3rem); line-height: 1; letter-spacing: -.05em; margin-top: 6px; }
 
-    .bar {
-      height: 11px;
-      border-radius: 999px;
-      overflow: hidden;
-      background: rgba(255,255,255,.08);
-    }
-
-    .fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, var(--purple), var(--orange-soft));
-      transition: .3s ease;
-    }
-
-    .section {
-      margin-top: 34px;
-    }
-
-    .section-title {
-      margin-bottom: 16px;
-    }
-
-    .section-title span {
-      color: var(--orange-soft);
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-size: .72rem;
-      font-weight: 900;
-    }
-
-    .section-title h2 {
-      font-size: clamp(1.8rem, 8vw, 3rem);
-      line-height: 1;
-      letter-spacing: -.05em;
-      margin-top: 6px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 14px;
-    }
+    .grid { display: grid; gap: 14px; }
 
     .grammar-box {
       border: 1px solid rgba(255,255,255,.10);
@@ -209,16 +136,8 @@
       background: rgba(255,255,255,.045);
     }
 
-    .grammar-box strong {
-      display: block;
-      color: var(--orange-soft);
-      margin-bottom: 6px;
-    }
-
-    .grammar-box p {
-      color: var(--muted);
-      font-size: .95rem;
-    }
+    .grammar-box strong { display: block; color: var(--orange-soft); margin-bottom: 6px; }
+    .grammar-box p { color: var(--muted); font-size: .95rem; }
 
     .card {
       border: 1px solid var(--line);
@@ -248,315 +167,75 @@
       border-radius: 4px;
     }
 
-    .text-block {
-      display: grid;
-      gap: 12px;
-      margin-top: 12px;
-    }
+    .text-block { display: grid; gap: 12px; margin-top: 12px; }
+    .dialogue { display: grid; gap: 12px; margin-top: 18px; }
+    .line { padding: 13px; border-radius: 18px; background: rgba(59,44,115,.08); border: 1px solid rgba(59,44,115,.10); }
+    .line strong { color: #3b2c73; }
 
-    .dialogue {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .line {
-      padding: 13px;
-      border-radius: 18px;
-      background: rgba(59,44,115,.08);
-      border: 1px solid rgba(59,44,115,.10);
-    }
-
-    .line strong {
-      color: #3b2c73;
-    }
-
-    .listen-wrap {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .exercise-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .exercise {
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 24px;
-      background: rgba(255,255,255,.05);
-      padding: 18px;
-    }
-
-    .exercise.done {
-      border-color: rgba(126,224,168,.5);
-      background: rgba(126,224,168,.08);
-    }
-
-    .question {
-      font-weight: 850;
-      margin-bottom: 12px;
-      line-height: 1.45;
-    }
-
-    .hint {
-      color: var(--muted);
-      font-size: .9rem;
-      margin: -4px 0 12px;
-    }
-
-    .options {
-      display: grid;
-      gap: 10px;
-    }
-
-    .option {
-      width: 100%;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      padding: 13px;
-      cursor: pointer;
-      text-align: left;
-      transition: .2s;
-    }
-
-    .option.correct {
-      background: rgba(126,224,168,.16);
-      border-color: rgba(126,224,168,.5);
-    }
-
-    .option.wrong {
-      background: rgba(255,140,140,.12);
-      border-color: rgba(255,140,140,.4);
-    }
-
-    input[type="text"] {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.07);
-      color: var(--text);
-      border-radius: 16px;
-      padding: 13px 14px;
-      outline: none;
-    }
-
-    input[type="text"]:focus {
-      border-color: rgba(138,124,255,.8);
-      box-shadow: 0 0 0 4px rgba(138,124,255,.12);
-    }
-
-    .input-row {
-      display: grid;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .check-btn {
-      border: none;
-      border-radius: 16px;
-      padding: 13px 16px;
-      background: var(--orange);
-      color: #160b32;
-      font-weight: 950;
-      cursor: pointer;
-    }
-
-    .feedback {
-      min-height: 20px;
-      margin-top: 10px;
-      font-size: .92rem;
-      color: var(--muted);
-    }
-
-    .feedback.good {
-      color: var(--green);
-      font-weight: 850;
-    }
-
-    .feedback.bad {
-      color: var(--red);
-      font-weight: 850;
-    }
-
-    .flash-wrap {
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 30px;
-      background: rgba(255,255,255,.05);
-      padding: 18px;
-    }
-
-    .flash-stage {
-      perspective: 1000px;
-      min-height: 290px;
+    .routine-card { cursor: pointer; overflow: hidden; padding: 0; }
+    .routine-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .routine-answer {
+      min-height: 66px;
       display: grid;
       place-items: center;
-      overflow: hidden;
-    }
-
-    .flashcard {
-      width: min(100%, 390px);
-      height: 260px;
-      cursor: pointer;
-      transition: .28s ease;
-      touch-action: manipulation;
-    }
-
-    .flashcard.slide-left {
-      transform: translateX(-120%) rotate(-10deg);
-      opacity: 0;
-    }
-
-    .flashcard.slide-right {
-      transform: translateX(120%) rotate(10deg);
-      opacity: 0;
-    }
-
-    .flash-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform .55s ease;
-      transform-style: preserve-3d;
-    }
-
-    .flashcard.flipped .flash-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flash-face {
-      position: absolute;
-      inset: 0;
-      border-radius: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 26px;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      overflow: hidden;
-      box-shadow: 0 22px 50px rgba(0,0,0,.24);
-    }
-
-    .flash-front {
-      background:
-        radial-gradient(circle at 80% 0%, rgba(240,178,108,.18), transparent 34%),
-        linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.05));
-      border: 1px solid rgba(255,255,255,.16);
-    }
-
-    .flash-back {
-      transform: rotateY(180deg);
-      background: linear-gradient(145deg, rgba(255,250,240,.98), rgba(248,245,238,.94));
-      color: #1b143d;
-    }
-
-    .flash-label {
-      color: var(--orange-soft);
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: .68rem;
+      padding: 14px;
+      color: var(--muted);
       font-weight: 900;
-      margin-bottom: 10px;
-    }
-
-    .flash-back .flash-label {
-      color: #8b5a28;
-    }
-
-    .flash-face h3 {
-      font-size: clamp(2rem, 8vw, 3.8rem);
-      line-height: 1.05;
-      letter-spacing: -.04em;
-      max-width: 92%;
-      overflow-wrap: break-word;
-    }
-
-    .flash-face p {
-      opacity: .7;
-      margin-top: 10px;
-      font-size: .9rem;
-    }
-
-    .flash-actions {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .flash-count {
       text-align: center;
-      color: var(--muted);
-      margin-top: 14px;
-      font-size: .88rem;
+      opacity: .72;
+    }
+    .routine-card.revealed .routine-answer {
+      color: var(--orange-soft);
+      opacity: 1;
+      background: rgba(255,255,255,.05);
     }
 
-    .completion {
-      border-radius: 32px;
-      padding: 30px 20px;
-      margin-top: 34px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(138,124,255,.18), transparent 32%),
-        linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.04));
-    }
+    .exercise-list { display: grid; gap: 14px; }
+    .exercise { border: 1px solid rgba(255,255,255,.12); border-radius: 24px; background: rgba(255,255,255,.05); padding: 18px; }
+    .exercise.done { border-color: rgba(126,224,168,.5); background: rgba(126,224,168,.08); }
+    .question { font-weight: 850; margin-bottom: 12px; line-height: 1.45; }
+    .options { display: grid; gap: 10px; }
+    .option { width: 100%; border-radius: 16px; border: 1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.06); color: var(--text); padding: 13px; cursor: pointer; text-align: left; transition: .2s; }
+    .option.correct { background: rgba(126,224,168,.16); border-color: rgba(126,224,168,.5); }
+    .option.wrong { background: rgba(255,140,140,.12); border-color: rgba(255,140,140,.4); }
 
-    .completion h2 {
-      font-size: clamp(2rem, 10vw, 3.5rem);
-      line-height: 1;
-      letter-spacing: -.06em;
-      margin-bottom: 12px;
-    }
+    .feedback { min-height: 20px; margin-top: 10px; font-size: .92rem; color: var(--muted); }
+    .feedback.good { color: var(--green); font-weight: 850; }
+    .feedback.bad { color: var(--red); font-weight: 850; }
 
-    .completion p {
-      color: var(--muted);
-    }
+    .flash-wrap { border: 1px solid rgba(255,255,255,.12); border-radius: 30px; background: rgba(255,255,255,.05); padding: 18px; }
+    .flash-stage { perspective: 1000px; min-height: 290px; display: grid; place-items: center; overflow: hidden; }
+    .flashcard { width: min(100%, 390px); height: 260px; cursor: pointer; transition: .28s ease; touch-action: manipulation; }
+    .flashcard.slide-left { transform: translateX(-120%) rotate(-10deg); opacity: 0; }
+    .flashcard.slide-right { transform: translateX(120%) rotate(10deg); opacity: 0; }
+    .flash-inner { position: relative; width: 100%; height: 100%; transition: transform .55s ease; transform-style: preserve-3d; }
+    .flashcard.flipped .flash-inner { transform: rotateY(180deg); }
+    .flash-face { position: absolute; inset: 0; border-radius: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 26px; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; box-shadow: 0 22px 50px rgba(0,0,0,.24); }
+    .flash-front { background: radial-gradient(circle at 80% 0%, rgba(240,178,108,.18), transparent 34%), linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.05)); border: 1px solid rgba(255,255,255,.16); }
+    .flash-back { transform: rotateY(180deg); background: linear-gradient(145deg, rgba(255,250,240,.98), rgba(248,245,238,.94)); color: #1b143d; }
+    .flash-label { color: var(--orange-soft); text-transform: uppercase; letter-spacing: .18em; font-size: .68rem; font-weight: 900; margin-bottom: 10px; }
+    .flash-back .flash-label { color: #8b5a28; }
+    .flash-face h3 { font-size: clamp(1.7rem, 7.5vw, 3.5rem); line-height: 1.05; letter-spacing: -.04em; max-width: 92%; overflow-wrap: break-word; }
+    .flash-face p { opacity: .7; margin-top: 10px; font-size: .9rem; }
+    .flash-count { text-align: center; color: var(--muted); margin-top: 14px; font-size: .88rem; }
+
+    .completion { border-radius: 32px; padding: 30px 20px; margin-top: 34px; text-align: center; border: 1px solid rgba(255,255,255,.14); background: radial-gradient(circle at 15% 20%, rgba(138,124,255,.18), transparent 32%), linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.04)); }
+    .completion h2 { font-size: clamp(2rem, 10vw, 3.5rem); line-height: 1; letter-spacing: -.06em; margin-bottom: 12px; }
+    .completion p { color: var(--muted); }
 
     @media (min-width: 760px) {
-      body {
-        padding: 28px 20px 80px;
-      }
-
-      .hero {
-        padding: 48px;
-      }
-
-      .hero-actions,
-      .flash-actions,
-      .listen-wrap {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .input-row {
-        grid-template-columns: 1fr auto;
-      }
+      body { padding: 28px 20px 80px; }
+      .hero { padding: 48px; }
+      .hero-actions, .flash-actions, .listen-wrap { grid-template-columns: 1fr 1fr 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 600px) {
-      .flash-stage {
-        min-height: 280px;
-      }
-
-      .flashcard {
-        height: 245px;
-      }
-
-      .flash-face {
-        padding: 22px;
-      }
-
-      .flash-face h3 {
-        font-size: clamp(1.75rem, 8.5vw, 2.7rem);
-      }
+      .flash-stage { min-height: 280px; }
+      .flashcard { height: 245px; }
+      .flash-face { padding: 22px; }
+      .flash-face h3 { font-size: clamp(1.55rem, 7.6vw, 2.45rem); }
+      .routine-card img { height: 165px; }
     }
   </style>
 </head>
@@ -564,10 +243,10 @@
 <body>
   <main class="container">
     <section class="hero">
-      <div class="eyebrow">To Be · School English · Daily Life</div>
+      <div class="eyebrow">To Be · Daily Routine · Do/Does</div>
       <h1>Pamela’s<br><span class="script">Practice ✦</span></h1>
       <p>
-        Today we are going to review the verb to be, questions, negatives, your vs. you’re and simple school situations with Pedro.
+        Today we are going to practice airport English, To Be, daily routines, do/does and don’t/doesn’t.
       </p>
       <div class="hero-actions">
         <button class="btn primary" onclick="document.getElementById('dialogue').scrollIntoView({behavior:'smooth'})">Start Practice</button>
@@ -578,7 +257,7 @@
 
     <section class="progress-wrap">
       <div class="progress-head">
-        <strong id="progressText">0 of 22 completed</strong>
+        <strong id="progressText">0 of 20 completed</strong>
         <span id="progressPercent">0%</span>
       </div>
       <div class="bar"><div class="fill" id="fill"></div></div>
@@ -589,76 +268,36 @@
         <span>Quick Review</span>
         <h2>What we are practicing</h2>
       </div>
-
       <div class="grid">
-        <div class="grammar-box">
-          <strong>To Be — Affirmative</strong>
-          <p>I am · You are · He is · She is · It is · We are · They are</p>
-        </div>
-
-        <div class="grammar-box">
-          <strong>To Be — Questions</strong>
-          <p>Are you okay? · Is he your son? · Is it serious? · Are they home?</p>
-        </div>
-
-        <div class="grammar-box">
-          <strong>To Be — Negative</strong>
-          <p>I am not · He isn’t · She isn’t · We aren’t · They aren’t</p>
-        </div>
-
-        <div class="grammar-box">
-          <strong>Your vs. You’re</strong>
-          <p>Your = seu/sua · You’re = you are<br>Your son is here. · You’re my friend.</p>
-        </div>
+        <div class="grammar-box"><strong>To Be</strong><p>I am · You are · He is · She is · We are · They are</p></div>
+        <div class="grammar-box"><strong>Do / Does</strong><p>Do you work? · Does he drink coffee? · Do they travel?</p></div>
+        <div class="grammar-box"><strong>Don’t / Doesn’t</strong><p>I don’t wake up late. · She doesn’t drink soda.</p></div>
+        <div class="grammar-box"><strong>Daily Routine</strong><p>wake up · brush teeth · take a shower · eat breakfast · go to work</p></div>
       </div>
     </section>
 
     <section class="section" id="dialogue">
       <div class="section-title">
-        <span>Text + Dialogue</span>
-        <h2>At Pedro’s School</h2>
+        <span>Dialogue</span>
+        <h2>Marina & Oliver</h2>
       </div>
-
       <article class="card paper">
         <div class="text-block" id="readingText">
-          <p>
-            Marina is Brazilian and Oliver is British. They are at the airport.
-            Marina is tired because she is traveling for work, but she is happy to practice English.
-            Oliver is waiting for his flight and he is drinking coffee.
-          </p>
-          <p>
-            They are talking about their routines. Marina wakes up early, brushes her teeth, takes a shower and goes to work.
-            Oliver says he loves Brazilian coffee and he would like to visit Rio someday.
-          </p>
+          <p>Marina is Brazilian and Oliver is British. They are at the airport. Marina is tired because she is traveling for work, but she is happy to practice English.</p>
+          <p>Oliver is drinking coffee and waiting for his flight. They are talking about their routines and their jobs.</p>
         </div>
-
         <div class="dialogue" id="dialogueText">
           <div class="line"><strong>Oliver:</strong> Hi. Are you waiting for your flight too?</div>
-          <div class="line"><strong>Marina:</strong> Yes, I am. I am a little tired today.</div>
-          <div class="line"><strong>Oliver:</strong> I understand. I am drinking coffee because I need energy.</div>
-          <div class="line"><strong>Marina:</strong> I love coffee too. I am from Brazil.</div>
-          <div class="line"><strong>Oliver:</strong> Really? That’s nice. I am from London.</div>
-          <div class="line"><strong>Marina:</strong> Nice to meet you. What is your daily routine like?</div>
-          <div class="line"><strong>Oliver:</strong> I wake up early, brush my teeth, take a shower and go to work.</div>
-          <div class="line"><strong>Marina:</strong> My routine is similar. I am always busy.</div>
-          <div class="line"><strong>Oliver:</strong> Are you traveling for work?</div>
-          <div class="line"><strong>Marina:</strong> Yes, I am. But I am excited too.</div>
+          <div class="line"><strong>Marina:</strong> Yes, I am. I am tired today.</div>
+          <div class="line"><strong>Oliver:</strong> Do you travel for work?</div>
+          <div class="line"><strong>Marina:</strong> Yes, I do. I work a lot.</div>
+          <div class="line"><strong>Oliver:</strong> Does your job stress you?</div>
+          <div class="line"><strong>Marina:</strong> Sometimes. But I like my job.</div>
+          <div class="line"><strong>Oliver:</strong> I drink coffee every morning. Do you drink coffee too?</div>
+          <div class="line"><strong>Marina:</strong> Yes, I do. I love Brazilian coffee.</div>
+          <div class="line"><strong>Oliver:</strong> What is your daily routine like?</div>
+          <div class="line"><strong>Marina:</strong> I wake up early, brush my teeth, take a shower and go to work.</div>
         </div>
-
-        <div class="listen-wrap">
-
-          <div class="line"><strong>Pamela:</strong> Hi, good morning. My name is Pamela. I am Pedro’s mom.</div>
-          <div class="line"><strong>Secretary:</strong> Good morning. How can I help you?</div>
-          <div class="line"><strong>Pamela:</strong> I am here because I am concerned about a message from the school.</div>
-          <div class="line"><strong>Secretary:</strong> Of course. Let me check. How old is Pedro?</div>
-          <div class="line"><strong>Pamela:</strong> He is four years old. He is my son.</div>
-          <div class="line"><strong>Secretary:</strong> Is Pedro okay?</div>
-          <div class="line"><strong>Pamela:</strong> I think so. Is the situation serious?</div>
-          <div class="line"><strong>Secretary:</strong> No, it isn’t serious. Everything is under control.</div>
-          <div class="line"><strong>Pamela:</strong> Thank you. I am here and I am ready to talk.</div>
-          <div class="line"><strong>Secretary:</strong> The principal is coming shortly. She is available now.</div>
-        </div>
-
         <div class="listen-wrap">
           <button class="btn primary" onclick="speakDialogue()">▶ Listen Dialogue</button>
           <button class="btn secondary" onclick="speakReading()">▶ Listen Text</button>
@@ -669,46 +308,45 @@
 
     <section class="section">
       <div class="section-title">
+        <span>Daily Routine</span>
+        <h2>Tap the cards ✦</h2>
+      </div>
+      <div class="grid">
+        <button class="card routine-card" type="button" onclick="toggleRoutine(this)"><img src="wakeup.webp" alt="A woman waking up"><div class="routine-answer" data-hidden="Tap to reveal">Tap to reveal</div><template>I wake up.</template></button>
+        <button class="card routine-card" type="button" onclick="toggleRoutine(this)"><img src="brushteeth.png" alt="A woman brushing her teeth"><div class="routine-answer" data-hidden="Tap to reveal">Tap to reveal</div><template>I brush my teeth.</template></button>
+        <button class="card routine-card" type="button" onclick="toggleRoutine(this)"><img src="getting-up.jpg" alt="A woman getting up"><div class="routine-answer" data-hidden="Tap to reveal">Tap to reveal</div><template>I get up.</template></button>
+        <button class="card routine-card" type="button" onclick="toggleRoutine(this)"><img src="shower.jpeg" alt="A person taking a shower"><div class="routine-answer" data-hidden="Tap to reveal">Tap to reveal</div><template>I take a shower.</template></button>
+        <button class="card routine-card" type="button" onclick="toggleRoutine(this)"><img src="eat.avif" alt="Breakfast"><div class="routine-answer" data-hidden="Tap to reveal">Tap to reveal</div><template>I eat breakfast.</template></button>
+        <button class="card routine-card" type="button" onclick="toggleRoutine(this)"><img src="goingwork.jpg" alt="A person going to work"><div class="routine-answer" data-hidden="Tap to reveal">Tap to reveal</div><template>I go to work.</template></button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
         <span>Exercises</span>
         <h2>Interpretation + Grammar</h2>
       </div>
-
       <div class="exercise-list">
-        <div class="exercise" data-id="q1"><div class="question">1. Who is Pamela?</div><div class="options"><button class="option" data-correct="true">She is Pedro’s mom.</button><button class="option">She is Pedro’s teacher.</button><button class="option">She is the principal.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q2"><div class="question">2. Where is Pamela?</div><div class="options"><button class="option">She is home.</button><button class="option" data-correct="true">She is at school.</button><button class="option">She is in the park.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q3"><div class="question">3. Why is Pamela at school?</div><div class="options"><button class="option" data-correct="true">Because she is concerned about a message.</button><button class="option">Because she is hungry.</button><button class="option">Because she is watching TV.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q4"><div class="question">4. How old is Pedro?</div><div class="options"><button class="option">He is three years old.</button><button class="option" data-correct="true">He is four years old.</button><button class="option">He is seven years old.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q5"><div class="question">5. Is the situation serious?</div><div class="options"><button class="option">Yes, it is.</button><button class="option" data-correct="true">No, it isn’t.</button><button class="option">Yes, she is.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q6"><div class="question">6. Who is coming shortly?</div><div class="options"><button class="option">Pedro.</button><button class="option" data-correct="true">The principal.</button><button class="option">Pamela’s husband.</button></div><div class="feedback"></div></div>
-
-        <div class="exercise" data-id="q7"><div class="question">7. Complete: I ___ Pamela.</div><div class="options"><button class="option" data-correct="true">am</button><button class="option">is</button><button class="option">are</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q8"><div class="question">8. Complete: Pedro ___ my son.</div><div class="options"><button class="option">am</button><button class="option" data-correct="true">is</button><button class="option">are</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q9"><div class="question">9. Complete: We ___ friends.</div><div class="options"><button class="option">is</button><button class="option">am</button><button class="option" data-correct="true">are</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q10"><div class="question">10. Complete: They ___ at school.</div><div class="options"><button class="option" data-correct="true">are</button><button class="option">is</button><button class="option">am</button></div><div class="feedback"></div></div>
-
-        <div class="exercise" data-id="q11"><div class="question">11. Transform into a question: You are okay.</div><div class="options"><button class="option" data-correct="true">Are you okay?</button><button class="option">Is you okay?</button><button class="option">Do you okay?</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q12"><div class="question">12. Transform into a question: He is your son.</div><div class="options"><button class="option">Are he your son?</button><button class="option" data-correct="true">Is he your son?</button><button class="option">He is your son?</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q13"><div class="question">13. Transform into a question: It is serious.</div><div class="options"><button class="option" data-correct="true">Is it serious?</button><button class="option">Are it serious?</button><button class="option">It is serious?</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q14"><div class="question">14. Transform into negative: She is home.</div><div class="options"><button class="option">She aren’t home.</button><button class="option" data-correct="true">She isn’t home.</button><button class="option">She don’t home.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q15"><div class="question">15. Transform into negative: We are friends.</div><div class="options"><button class="option" data-correct="true">We aren’t friends.</button><button class="option">We isn’t friends.</button><button class="option">We don’t friends.</button></div><div class="feedback"></div></div>
-
-        <div class="exercise" data-id="q16"><div class="question">16. Choose the correct sentence:</div><div class="options"><button class="option" data-correct="true">Your son is here.</button><button class="option">You’re son is here.</button><button class="option">You son is here.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q17"><div class="question">17. Choose the correct sentence:</div><div class="options"><button class="option">Your my favorite person.</button><button class="option" data-correct="true">You’re my favorite person.</button><button class="option">You my favorite person.</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q18"><div class="question">18. Complete: Pedro is not home. He ___ at school.</div><div class="options"><button class="option">am</button><button class="option" data-correct="true">is</button><button class="option">are</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q19"><div class="question">19. Complete: I’m tired. I need some ___.</div><div class="options"><button class="option">coffee</button><button class="option" data-correct="true">sleep</button><button class="option">school</button></div><div class="feedback"></div></div>
-        <div class="exercise" data-id="q20"><div class="question">20. Complete: Everything is under ___.</div><div class="options"><button class="option" data-correct="true">control</button><button class="option">outside</button><button class="option">coffee</button></div><div class="feedback"></div></div>
-
-        <div class="exercise" data-id="q21">
-          <div class="question">21. Complete: I ___ here.</div>
-          <div class="input-row"><input type="text" data-answer="am" placeholder="Type here..."><button class="check-btn">Check</button></div>
-          <div class="feedback"></div>
-        </div>
-
-        <div class="exercise" data-id="q22">
-          <div class="question">22. Complete: She ___ available now.</div>
-          <div class="input-row"><input type="text" data-answer="is" placeholder="Type here..."><button class="check-btn">Check</button></div>
-          <div class="feedback"></div>
-        </div>
+        <div class="exercise" data-id="q1"><div class="question">1. Where are Marina and Oliver?</div><div class="options"><button class="option" data-correct="true">At the airport.</button><button class="option">At school.</button><button class="option">At home.</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q2"><div class="question">2. Is Marina Brazilian?</div><div class="options"><button class="option" data-correct="true">Yes, she is.</button><button class="option">No, she isn’t.</button><button class="option">Yes, she does.</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q3"><div class="question">3. Is Oliver British?</div><div class="options"><button class="option" data-correct="true">Yes, he is.</button><button class="option">No, he isn’t.</button><button class="option">Yes, he does.</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q4"><div class="question">4. Why is Marina tired?</div><div class="options"><button class="option" data-correct="true">Because she is traveling for work.</button><button class="option">Because she is at school.</button><button class="option">Because she doesn’t like coffee.</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q5"><div class="question">5. Does Oliver drink coffee?</div><div class="options"><button class="option" data-correct="true">Yes, he does.</button><button class="option">No, he doesn’t.</button><button class="option">Yes, he is.</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q6"><div class="question">6. Complete: I ___ tired.</div><div class="options"><button class="option" data-correct="true">am</button><button class="option">is</button><button class="option">are</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q7"><div class="question">7. Complete: She ___ Brazilian.</div><div class="options"><button class="option">am</button><button class="option" data-correct="true">is</button><button class="option">are</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q8"><div class="question">8. Complete: They ___ at the airport.</div><div class="options"><button class="option">am</button><button class="option">is</button><button class="option" data-correct="true">are</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q9"><div class="question">9. Complete: Do you ___ coffee?</div><div class="options"><button class="option" data-correct="true">drink</button><button class="option">drinks</button><button class="option">drinking</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q10"><div class="question">10. Complete: She ___ coffee every morning.</div><div class="options"><button class="option">drink</button><button class="option" data-correct="true">drinks</button><button class="option">drinking</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q11"><div class="question">11. Complete: I ___ wake up late.</div><div class="options"><button class="option" data-correct="true">don’t</button><button class="option">doesn’t</button><button class="option">isn’t</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q12"><div class="question">12. Complete: He ___ drink soda.</div><div class="options"><button class="option">don’t</button><button class="option" data-correct="true">doesn’t</button><button class="option">isn’t</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q13"><div class="question">13. Choose the correct question:</div><div class="options"><button class="option" data-correct="true">Do you work?</button><button class="option">Does you work?</button><button class="option">Are you work?</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q14"><div class="question">14. Choose the correct question:</div><div class="options"><button class="option">Do she drink coffee?</button><button class="option" data-correct="true">Does she drink coffee?</button><button class="option">Is she drink coffee?</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q15"><div class="question">15. Complete: I wake up early and ___ to work.</div><div class="options"><button class="option">goes</button><button class="option" data-correct="true">go</button><button class="option">going</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q16"><div class="question">16. Complete: She ___ her teeth every morning.</div><div class="options"><button class="option">brush</button><button class="option" data-correct="true">brushes</button><button class="option">brushing</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q17"><div class="question">17. Choose the correct sentence:</div><div class="options"><button class="option" data-correct="true">I take a shower every morning.</button><button class="option">I takes a shower every morning.</button><button class="option">I taking a shower every morning.</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q18"><div class="question">18. Complete: They ___ work on weekends.</div><div class="options"><button class="option" data-correct="true">don’t</button><button class="option">doesn’t</button><button class="option">aren’t</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q19"><div class="question">19. Complete: He ___ tired today.</div><div class="options"><button class="option">are</button><button class="option" data-correct="true">is</button><button class="option">am</button></div><div class="feedback"></div></div>
+        <div class="exercise" data-id="q20"><div class="question">20. Complete: We ___ coffee in the morning.</div><div class="options"><button class="option" data-correct="true">drink</button><button class="option">drinks</button><button class="option">drinking</button></div><div class="feedback"></div></div>
       </div>
     </section>
 
@@ -717,37 +355,27 @@
         <span>Flashcards</span>
         <h2>Review vocabulary</h2>
       </div>
-
       <div class="flash-wrap">
         <div class="flash-stage">
           <div class="flashcard" id="flashcard" onclick="flipCard()">
             <div class="flash-inner">
-              <div class="flash-face flash-front">
-                <span class="flash-label">English</span>
-                <h3 id="flashEnglish">I am here.</h3>
-                <p>Tap to flip</p>
-              </div>
-              <div class="flash-face flash-back">
-                <span class="flash-label">Português</span>
-                <h3 id="flashPortuguese">Eu estou aqui.</h3>
-                <p>Tap to go back</p>
-              </div>
+              <div class="flash-face flash-front"><span class="flash-label">English</span><h3 id="flashEnglish">I wake up.</h3><p>Tap to flip</p></div>
+              <div class="flash-face flash-back"><span class="flash-label">Português</span><h3 id="flashPortuguese">Eu acordo.</h3><p>Tap to go back</p></div>
             </div>
           </div>
         </div>
-
         <div class="flash-actions">
           <button class="btn secondary" onclick="previousCard()">← Back</button>
           <button class="btn primary" onclick="speakFlashcard(event)">🔊 Listen</button>
           <button class="btn secondary" onclick="nextCard()">Next →</button>
         </div>
-        <div class="flash-count" id="flashCount">1 / 20</div>
+        <div class="flash-count" id="flashCount">1 / 16</div>
       </div>
     </section>
 
     <section class="completion">
       <h2>Great job, Pamela ✦</h2>
-      <p>You practiced To Be, questions, negatives, school vocabulary, your vs. you’re and useful sentences for real life.</p>
+      <p>You practiced To Be, daily routines, do/does, don’t/doesn’t and airport English.</p>
     </section>
   </main>
 
@@ -756,33 +384,31 @@
     const completed = new Set();
 
     const flashcards = [
-      { english: 'I am here.', portuguese: 'Eu estou aqui.' },
-      { english: 'I am Pamela.', portuguese: 'Eu sou Pamela.' },
-      { english: 'He is my son.', portuguese: 'Ele é meu filho.' },
-      { english: 'She is my English teacher.', portuguese: 'Ela é minha professora de inglês.' },
-      { english: 'They are at school.', portuguese: 'Eles estão na escola.' },
-      { english: 'We are friends.', portuguese: 'Nós somos amigos.' },
-      { english: 'Are you okay?', portuguese: 'Você está bem?' },
-      { english: 'Is he your son?', portuguese: 'Ele é seu filho?' },
-      { english: 'Is it serious?', portuguese: 'É sério?' },
-      { english: 'She isn’t home.', portuguese: 'Ela não está em casa.' },
-      { english: 'We aren’t friends.', portuguese: 'Nós não somos amigos.' },
-      { english: 'I’m not your wife.', portuguese: 'Eu não sou sua esposa.' },
-      { english: 'your son', portuguese: 'seu filho' },
-      { english: 'you’re my friend', portuguese: 'você é meu amigo' },
-      { english: 'under control', portuguese: 'sob controle' },
-      { english: 'outside', portuguese: 'lado de fora' },
-      { english: 'inside', portuguese: 'lado de dentro' },
-      { english: 'I am ready to talk.', portuguese: 'Eu estou pronta para conversar.' },
-      { english: 'How can I help you?', portuguese: 'Como posso te ajudar?' },
-      { english: 'I would like a coffee.', portuguese: 'Eu gostaria de um café.' }
+      { english: 'I wake up.', portuguese: 'Eu acordo.' },
+      { english: 'I get up.', portuguese: 'Eu levanto.' },
+      { english: 'I brush my teeth.', portuguese: 'Eu escovo meus dentes.' },
+      { english: 'I take a shower.', portuguese: 'Eu tomo banho.' },
+      { english: 'I eat breakfast.', portuguese: 'Eu tomo café da manhã.' },
+      { english: 'I go to work.', portuguese: 'Eu vou para o trabalho.' },
+      { english: 'I am tired.', portuguese: 'Eu estou cansada.' },
+      { english: 'She is Brazilian.', portuguese: 'Ela é brasileira.' },
+      { english: 'He is British.', portuguese: 'Ele é britânico.' },
+      { english: 'They are at the airport.', portuguese: 'Eles estão no aeroporto.' },
+      { english: 'Do you drink coffee?', portuguese: 'Você bebe café?' },
+      { english: 'Does she work?', portuguese: 'Ela trabalha?' },
+      { english: 'I don’t wake up late.', portuguese: 'Eu não acordo tarde.' },
+      { english: 'He doesn’t drink soda.', portuguese: 'Ele não bebe refrigerante.' },
+      { english: 'She brushes her teeth.', portuguese: 'Ela escova os dentes dela.' },
+      { english: 'Marina is traveling for work.', portuguese: 'Marina está viajando a trabalho.' }
     ];
 
     let currentFlashcard = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     function updateProgress() {
       const count = completed.size;
-      const percent = Math.round((count / totalExercises) * 100);
+      const percent = totalExercises ? Math.round((count / totalExercises) * 100) : 0;
       document.getElementById('progressText').textContent = `${count} of ${totalExercises} completed`;
       document.getElementById('progressPercent').textContent = `${percent}%`;
       document.getElementById('fill').style.width = `${percent}%`;
@@ -797,13 +423,111 @@
       }
     }
 
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = .76;
+      utterance.pitch = 1;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function speakDialogue() {
+      const text = [...document.querySelectorAll('#dialogueText .line')].map(line => line.textContent.replace(/\s+/g, ' ').trim()).join(' ');
+      speakText(text);
+    }
+
+    function speakReading() {
+      const text = [...document.querySelectorAll('#readingText p')].map(p => p.textContent.replace(/\s+/g, ' ').trim()).join(' ');
+      speakText(text);
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    }
+
+    function toggleRoutine(card) {
+      const answer = card.querySelector('.routine-answer');
+      const template = card.querySelector('template');
+      if (!answer || !template) return;
+      const isRevealed = card.classList.toggle('revealed');
+      answer.textContent = isRevealed ? template.innerHTML.trim() : answer.dataset.hidden;
+      if (isRevealed) speakText(template.innerHTML.trim());
+    }
+
+    function renderFlashcard() {
+      const card = flashcards[currentFlashcard];
+      const flashcard = document.getElementById('flashcard');
+      if (!card || !flashcard) return;
+      document.getElementById('flashEnglish').textContent = card.english;
+      document.getElementById('flashPortuguese').textContent = card.portuguese;
+      document.getElementById('flashCount').textContent = `${currentFlashcard + 1} / ${flashcards.length}`;
+      flashcard.classList.remove('flipped', 'slide-left', 'slide-right');
+    }
+
+    function flipCard() {
+      const flashcard = document.getElementById('flashcard');
+      if (flashcard) flashcard.classList.toggle('flipped');
+    }
+
+    function speakFlashcard(event) {
+      if (event) event.stopPropagation();
+      if (flashcards[currentFlashcard]) speakText(flashcards[currentFlashcard].english);
+    }
+
+    function nextCard() {
+      const flashcard = document.getElementById('flashcard');
+      if (!flashcard) return;
+      flashcard.classList.add('slide-left');
+      setTimeout(() => {
+        currentFlashcard = (currentFlashcard + 1) % flashcards.length;
+        renderFlashcard();
+      }, 220);
+    }
+
+    function previousCard() {
+      const flashcard = document.getElementById('flashcard');
+      if (!flashcard) return;
+      flashcard.classList.add('slide-right');
+      setTimeout(() => {
+        currentFlashcard = (currentFlashcard - 1 + flashcards.length) % flashcards.length;
+        renderFlashcard();
+      }, 220);
+    }
+
+    function resetPractice() {
+      completed.clear();
+      stopSpeech();
+      document.querySelectorAll('.exercise').forEach(exercise => {
+        exercise.classList.remove('done');
+        exercise.querySelectorAll('.option').forEach(option => option.classList.remove('correct', 'wrong'));
+        const feedback = exercise.querySelector('.feedback');
+        feedback.textContent = '';
+        feedback.className = 'feedback';
+      });
+      document.querySelectorAll('.routine-card').forEach(card => {
+        card.classList.remove('revealed');
+        const answer = card.querySelector('.routine-answer');
+        if (answer) answer.textContent = answer.dataset.hidden;
+      });
+      updateProgress();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function runSelfTests() {
+      console.assert(document.getElementById('flashcard'), 'flashcard exists');
+      console.assert(document.querySelectorAll('.exercise').length === 20, '20 exercises exist');
+      console.assert(document.querySelectorAll('.routine-card').length === 6, '6 routine cards exist');
+      console.assert(typeof toggleRoutine === 'function', 'toggleRoutine exists');
+    }
+
     document.querySelectorAll('.option').forEach(button => {
       button.addEventListener('click', () => {
         const exercise = button.closest('.exercise');
         const feedback = exercise.querySelector('.feedback');
         const options = exercise.querySelectorAll('.option');
         options.forEach(opt => opt.classList.remove('correct', 'wrong'));
-
         if (button.dataset.correct === 'true') {
           button.classList.add('correct');
           feedback.textContent = '✅ Correct!';
@@ -817,136 +541,24 @@
       });
     });
 
-    function clean(value) {
-      return value.trim().toLowerCase().replace(/[.!?,;:]/g, '').replace(/’/g, "'").replace(/\s+/g, ' ');
-    }
-
-    document.querySelectorAll('.check-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const exercise = button.closest('.exercise');
-        const input = exercise.querySelector('input');
-        const feedback = exercise.querySelector('.feedback');
-        const correct = clean(input.dataset.answer);
-        const answer = clean(input.value);
-
-        if (answer === correct) {
-          feedback.textContent = '✅ Correct!';
-          feedback.className = 'feedback good';
-          markDone(exercise);
-        } else if (!answer) {
-          feedback.textContent = 'Type your answer first.';
-          feedback.className = 'feedback bad';
-        } else {
-          feedback.textContent = '❌ Try again.';
-          feedback.className = 'feedback bad';
+    const flashcardEl = document.getElementById('flashcard');
+    if (flashcardEl) {
+      flashcardEl.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+      flashcardEl.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 70) {
+          if (diff < 0) nextCard();
+          if (diff > 0) previousCard();
         }
       });
-    });
-
-    document.querySelectorAll('input').forEach(input => {
-      input.addEventListener('keydown', e => {
-        if (e.key === 'Enter') input.closest('.exercise').querySelector('.check-btn').click();
-      });
-    });
-
-    function speakText(text) {
-      if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'en-US';
-      utterance.rate = .76;
-      utterance.pitch = 1;
-      window.speechSynthesis.speak(utterance);
-    }
-
-    function speakDialogue() {
-      const text = [...document.querySelectorAll('#dialogueText .line')]
-        .map(line => line.textContent.replace(/\s+/g, ' ').trim())
-        .join(' ');
-      speakText(text);
-    }
-
-    function speakReading() {
-      const text = [...document.querySelectorAll('#readingText p')]
-        .map(p => p.textContent.replace(/\s+/g, ' ').trim())
-        .join(' ');
-      speakText(text);
-    }
-
-    function stopSpeech() {
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-    }
-
-    function renderFlashcard() {
-      const card = flashcards[currentFlashcard];
-      const flashcard = document.getElementById('flashcard');
-      document.getElementById('flashEnglish').textContent = card.english;
-      document.getElementById('flashPortuguese').textContent = card.portuguese;
-      document.getElementById('flashCount').textContent = `${currentFlashcard + 1} / ${flashcards.length}`;
-      flashcard.classList.remove('flipped', 'slide-left', 'slide-right');
-    }
-
-    function flipCard() {
-      document.getElementById('flashcard').classList.toggle('flipped');
-    }
-
-    function speakFlashcard(event) {
-      if (event) event.stopPropagation();
-      speakText(flashcards[currentFlashcard].english);
-    }
-
-    function nextCard() {
-      const flashcard = document.getElementById('flashcard');
-      flashcard.classList.add('slide-left');
-      setTimeout(() => {
-        currentFlashcard = (currentFlashcard + 1) % flashcards.length;
-        renderFlashcard();
-      }, 220);
-    }
-
-    function previousCard() {
-      const flashcard = document.getElementById('flashcard');
-      flashcard.classList.add('slide-right');
-      setTimeout(() => {
-        currentFlashcard = (currentFlashcard - 1 + flashcards.length) % flashcards.length;
-        renderFlashcard();
-      }, 220);
-    }
-
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.getElementById('flashcard').addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    document.getElementById('flashcard').addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      const diff = touchEndX - touchStartX;
-      if (Math.abs(diff) > 70) {
-        if (diff < 0) nextCard();
-        if (diff > 0) previousCard();
-      }
-    });
-
-    function resetPractice() {
-      completed.clear();
-      stopSpeech();
-      document.querySelectorAll('.exercise').forEach(exercise => {
-        exercise.classList.remove('done');
-        exercise.querySelectorAll('.option').forEach(option => option.classList.remove('correct', 'wrong'));
-        const input = exercise.querySelector('input');
-        if (input) input.value = '';
-        const feedback = exercise.querySelector('.feedback');
-        feedback.textContent = '';
-        feedback.className = 'feedback';
-      });
-      updateProgress();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     renderFlashcard();
     updateProgress();
+    runSelfTests();
   </script>
 </body>
 </html>
